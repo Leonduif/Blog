@@ -1,9 +1,13 @@
+// Modules
 var gulp       = require('gulp');
 var sass       = require('gulp-sass');
 var livereload = require('gulp-livereload');
 
+// Files
+var sassFiles  = './assets/sass/**/*.scss';
+
 gulp.task('sass', function() {
-	gulp.src('./assets/sass/**/*.scss')
+	gulp.src(sassFiles)
 		.pipe(sass()).on('error', sass.logError)
 		.pipe(gulp.dest('dist'))
 		.pipe(livereload());
@@ -11,5 +15,5 @@ gulp.task('sass', function() {
 
 gulp.task('watch', function() {
 	livereload.listen();
-	gulp.watch('assets/sass/**/*.scss', ['sass']);
+	gulp.watch(sassFiles, ['sass']);
 });

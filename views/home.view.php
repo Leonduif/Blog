@@ -1,4 +1,5 @@
 <?php 
+	// Is this the model? I think so, maybe I can include it in a way so this view is as clean as possible
 	include "db/add-post.php";
 	$blogs = Database::query("SELECT * FROM posts", [], $conn);
 ?>
@@ -12,7 +13,7 @@
 			</li>
 			<li>
 				<label>Body</label>
-				<textarea name="body" value="<?= isOld('body'); ?>"></textarea>
+				<textarea name="body"><?= isOld('body'); ?></textarea>
 			</li>
 			<li>
 				<input type="submit" value="Add blog" name="add-post">

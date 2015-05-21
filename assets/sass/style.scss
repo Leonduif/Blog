@@ -6,7 +6,7 @@
 }
 
 .form {
-	width: 700px;
+	width: 500px;
 	ul {
 		list-style-type: none;
 		li {
@@ -18,7 +18,18 @@
 		border: 0;
 		padding: 9px 18px;
 		color: #FFF;
-		border-radius: 5px;
+		border-radius: 2px;
+		cursor: pointer;
+		border-bottom: 3px solid darken(#1B9EC8, 5%);
+		box-shadow: 0px 4px 5px -2px #CCC;
+		position: relative;
+		&:active {
+			border-bottom: 0;
+			top: 2px;
+			margin-bottom: 3px;
+			box-shadow: none;
+			outline: 0;
+		}
 	}
 	label {
 		display: block;

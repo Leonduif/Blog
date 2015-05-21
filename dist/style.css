@@ -9,7 +9,7 @@
   margin: 0 auto; }
 
 .form {
-  width: 700px; }
+  width: 500px; }
   .form ul {
     list-style-type: none; }
     .form ul li {
@@ -19,7 +19,17 @@
     border: 0;
     padding: 9px 18px;
     color: #FFF;
-    border-radius: 5px; }
+    border-radius: 2px;
+    cursor: pointer;
+    border-bottom: 3px solid #188cb2;
+    box-shadow: 0px 4px 5px -2px #CCC;
+    position: relative; }
+    .form [type='submit']:active {
+      border-bottom: 0;
+      top: 2px;
+      margin-bottom: 3px;
+      box-shadow: none;
+      outline: 0; }
   .form label {
     display: block; }
   .form [type='text'], .form textarea {
