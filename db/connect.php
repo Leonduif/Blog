@@ -14,8 +14,7 @@
 				$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 				return $conn;
 			} catch (PDOException $e) {
-				die("Could not connect to db");
-				// return false;
+				return false;
 			}
 		}
 

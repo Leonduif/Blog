@@ -35,5 +35,17 @@ h1 {
 
 .message {
   display: block;
-  padding: 10px;
-  border: 1px solid #CCC; }
+  padding: 10px; }
+  .message.error {
+    border: 1px solid red;
+    color: red; }
+  .message.valid {
+    border: 1px solid green;
+    color: green; }
+
+.blog {
+  margin-top: 30px; }
+  .blog article {
+    border-bottom: 1px solid #CCC;
+    margin-bottom: 20px;
+    padding-bottom: 20px; }

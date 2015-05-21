@@ -9,13 +9,12 @@
 						 $conn);
 
 			$message = "Form succesfully submitted";
+			$messageClass = 'valid';
 			$_POST = [];
 		}
 		else {
+			$messageClass = 'error';
 			$message = "Please fill in all forms plx";
 		}
-	}
-	else {
-		$message = 'Fill in form plx';
 	}
 ?>
