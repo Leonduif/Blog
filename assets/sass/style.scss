@@ -1,0 +1,45 @@
+@import "reset";
+ 
+ .container {
+ 	width: 80%;
+ 	margin: 0 auto;
+ }
+
+ .form {
+ 	width: 700px;
+ 	ul {
+ 		list-style-type: none;
+ 		li {
+ 			margin-bottom: 15px;
+ 		}
+ 	}
+ 	[type='submit'] {
+ 		background: #1B9EC8;
+ 		border: 0;
+ 		padding: 9px 18px;
+ 		color: #FFF;
+ 		border-radius: 5px;
+ 	}
+ 	label {
+ 		display: block;
+ 	}
+ 	[type='text'], textarea {
+ 		padding: 5px;
+ 		border-radius: 5px;
+ 		border: 1px solid #CCC;
+ 		width: 100%;
+ 	}
+ 	textarea {
+ 		height: 150px;
+ 	}
+ }
+
+ h1 {
+ 	margin-bottom: 30px;
+ }
+
+ .message {
+ 	display: block;
+ 	padding: 10px;
+ 	border: 1px solid #CCC;
+ }

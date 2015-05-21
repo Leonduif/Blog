@@ -1,0 +1,24 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "my first blog",
+  "main": "index.js",
+  "dependencies": {
+    "gulp": "^3.8.11",
+    "npm": "^2.10.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-livereload": "^3.8.0",
+    "gulp-sass": "^2.0.1",
+    "gulp-watch": "^4.2.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "blog"
+  ],
+  "author": "Leon Duif",
+  "license": "ISC"
+}
