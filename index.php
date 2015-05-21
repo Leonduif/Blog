@@ -1,12 +1,9 @@
 <?php
-	// Specific
-	$view_path = 'views/home.php';
+	require 'blog.php';
 
-	// Always there
-	require "db/connect.php";
-	require "db/functions.php";
-	include "views/layout.php";
+	if (!$conn) {
+		echo "No connection with DB";
+	}
 
-	// Specific
-	include "db/add-post.php";
+	view('home', ['conn' => $conn]);
 ?>
