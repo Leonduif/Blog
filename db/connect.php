@@ -1,10 +1,5 @@
 <?php 
-	$config = ["dbtype" => "mysql",
-				"host" => "localhost",
-				"username" => "root",
-				"password" => "superduif",
-				"dbname" => "blog",
-				];
+	require 'config.php';
 
 	Class Database {
 		static function connect($config) {
