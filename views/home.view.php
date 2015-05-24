@@ -1,8 +1,3 @@
-<?php 
-	// Is this the model? I think so, maybe I can include it in a way so this view is as clean as possible
-	include "db/add-post.php";
-	$blogs = Database::query("SELECT * FROM posts", [], $conn);
-?>
 <div class="container">
 	<h1>My first blog</h1>
 	<form method="post" class="form">

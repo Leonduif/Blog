@@ -6,18 +6,20 @@
 		} 
 	}
 
-	function test() {
-		$test = "test";
-		return $test;
-	}
-
 	// Shows view and passes data with it
-	function view($view_path, $data = null) {
+	function viewModel($page, $data = null) {
 		if ($data) {
 			extract($data);
 		}
 
-		$view_path = "views/" . $view_path . ".view.php";
-		include "views/layout.php";
+		$view_path  = "views/" . $page . ".view.php";
+		$model_path = "models/" . $page . ".model.php";
+
+		if (file_exists($view_path) && file_exists($model_path)) {
+			include "views/layout.php";
+		}
+		else {
+			return false;
+		}
 	}
 ?>

@@ -8,13 +8,15 @@
 						 ["title" => $title, "body" => $body],
 						 $conn);
 
-			$message = "Form succesfully submitted";
+			$message      = "Form succesfully submitted";
 			$messageClass = 'valid';
-			$_POST = [];
+			$_POST        = [];
 		}
 		else {
+			$message      = "Please fill in all forms plx";
 			$messageClass = 'error';
-			$message = "Please fill in all forms plx";
 		}
 	}
+
+	$blogs = Database::query("SELECT * FROM posts", [], $conn);
 ?>
