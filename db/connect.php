@@ -13,7 +13,7 @@
 			}
 		}
 
-		static function query($query, $bindings, $conn) {
+		static function fetch($query, $bindings, $conn) {
 			if ($conn) {
 				$statement = $conn->prepare($query);
 				$statement->execute($bindings);

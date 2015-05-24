@@ -1,4 +1,4 @@
-<?php 
+<?php
 	if (isset($_POST['add-post'])) {
 		if (!empty($_POST['title']) && !empty($_POST['body'])) {
 			$title = htmlspecialchars(trim($_POST['title']));
@@ -18,5 +18,5 @@
 		}
 	}
 
-	$blogs = Database::query("SELECT * FROM posts", [], $conn);
+	$posts = Database::fetch("SELECT * FROM posts", [], $conn);
 ?>

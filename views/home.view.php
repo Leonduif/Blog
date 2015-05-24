@@ -20,12 +20,12 @@
 	<p class="message <?= $messageClass; ?>"><?= $message; ?></p>
 	<?php endif; ?>
 	
-	<?php if ($blogs) : ?>
+	<?php if ($posts) : ?>
 	<section class="blog">
-		<?php foreach ($blogs as $blog) : ?>
+		<?php foreach ($posts as $post) : ?>
 			<article>
-				<h2 class="blog__title"><a href="single.php?id=<?= $blog['id']; ?>"><?= $blog['title']; ?></a></h2>
-				<p class="blog__body"><?= substr($blog['body'], 0, 50); ?></p>
+				<h2 class="blog__title"><a href="single.php?id=<?= $post['id']; ?>"><?= $post['title']; ?></a></h2>
+				<p class="blog__body"><?= substr($post['body'], 0, 50); ?></p>
 			</article>
 		<?php endforeach; ?>
 	</section>
