@@ -2,34 +2,49 @@
 	require 'config.php';
 
 	Class Database {
-		static function connect($config) {
+		private $dbtype;
+		private $host;
+		private $dbname;
+		private $username;
+		private $password;
+		public $conn;
+
+		public function __construct($config) {
+			$this->dbtype   = $config['dbtype'];
+			$this->host     = $config['host'];
+			$this->dbname   = $config['dbname'];
+			$this->username = $config['username'];
+			$this->password = $config['password'];
+			$this->connect();
+		}
+
+		public function connect() {
 			try {
-				$conn = new PDO("$config[dbtype]:host=$config[host];dbname=$config[dbname]",
-								 $config["username"], $config["password"]);
-				$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-				return $conn;
+				$this->conn = new PDO("$this->dbtype:host=$this->host;dbname=$this->dbname", $this->username, $this->password);
+				$this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 			} catch (PDOException $e) {
-				return false;
+				$this->conn = false;
 			}
 		}
 
-		static function fetch($query, $bindings, $conn) {
-			if ($conn) {
-				$statement = $conn->prepare($query);
+		public function fetch($query, $bindings = []) {
+			if ($this->conn) {
+				$statement = $this->conn->prepare($query);
 				$statement->execute($bindings);
 
 				$results = $statement->fetchAll();
 
 				return $results ? $results : false;
 			}
+			echo "Couldn't fetch data because there is no connection to the DB";
 			return false;
 		}
 
-		static function add($query, $bindings, $conn) {
+		public function write($query, $bindings, $conn) {
 			$statement = $conn->prepare($query);
-			return $statement->execute($bindings);
+			$statement->execute($bindings);
 		}
 	}
 
-	$conn = Database::connect($config);
+	$conn = new Database($config);
 ?>

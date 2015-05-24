@@ -16,8 +16,8 @@
 		</ul>
 	</form>
 
-	<?php if (isset($message) && !empty($message)) : ?>
-	<p class="message <?= $messageClass; ?>"><?= $message; ?></p>
+	<?php if (isset($alert) && !empty($alert)) : ?>
+	<p class="message <?= $alertClass; ?>"><?= $alert; ?></p>
 	<?php endif; ?>
 	
 	<?php if ($posts) : ?>
