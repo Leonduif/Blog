@@ -1,6 +1,5 @@
 <?php
-
-	$db    = new Post($config);
+	$db = new Post($conn);
 
 	// On form submit
 	if (isset($_POST['add-post'])) {
@@ -9,8 +8,5 @@
 		$alertClass = $db->messageClass;
 	}
 
-	$posts = $db->fetch("SELECT * FROM posts");
-
-
-	// $posts = Database::fetch("SELECT * FROM posts", [], $conn);
+	$posts = Database::fetch("SELECT * FROM posts ORDER BY id DESC", [], $conn);
 ?>

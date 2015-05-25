@@ -5,5 +5,5 @@
 		echo "No connection with DB";
 	}
 
-	viewModel('single', ['config' => $config]);
+	viewModel('single', ['conn' => $conn]);
 ?>
