@@ -1,4 +1,5 @@
 <div class="container">
+	<h1>Edit post</h1>
 	<form method="post" class="form">
 		<ul>
 			<li>

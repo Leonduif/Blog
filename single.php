@@ -14,6 +14,5 @@
 		Header("Location: views/404.view.php");
 	}
 
-	view('single', ['conn' => $conn,
-					'blog' => $blog]);
+	view('single', ['blog' => $blog]);
 ?>

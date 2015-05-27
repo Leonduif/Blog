@@ -23,8 +23,7 @@
 
 	$posts = Database::fetch("SELECT * FROM posts ORDER BY id DESC", [], $conn);
 
-	view('home', ['conn' => $conn,
-				  'alert' => $alert,
+	view('home', ['alert' => $alert,
 				  'alertClass' => $alertClass,
 				  'posts' => $posts]);
 ?>
