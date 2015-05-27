@@ -26,6 +26,10 @@
 			<article>
 				<h2 class="blog__title"><a href="single.php?id=<?= $post['id']; ?>"><?= $post['title']; ?></a></h2>
 				<p class="blog__body"><?= substr($post['body'], 0, 50); ?></p>
+				<ul class="blog__options">
+					<li><a class="delete" href="delete.php?id=<?= $post['id']; ?>">Delete</a></li>
+					<li><a class="edit" href="edit.php?id=<?= $post['id']; ?>">Edit</a></li>
+				</ul>
 			</article>
 		<?php endforeach; ?>
 	</section>

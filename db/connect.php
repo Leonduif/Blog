@@ -38,7 +38,7 @@
 			return false;
 		}
 
-		public static function write($query, $bindings, $conn) {
+		public static function query($query, $bindings, $conn) {
 			if ($conn) {
 				$statement = $conn->prepare($query);
 				$statement->execute($bindings);

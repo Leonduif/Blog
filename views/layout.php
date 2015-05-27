@@ -6,7 +6,6 @@
 	<link rel="stylesheet" type="text/css" href="dist/style.css">
 </head>
 <body>
-	<?php include($model_path); ?>
 	<?php include($view_path); ?>
 </body>
 </html>

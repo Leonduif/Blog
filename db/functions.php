@@ -7,19 +7,35 @@
 	}
 
 	// Shows view and passes data with it
-	function viewModel($page, $data = null) {
+	function view($page, $data = null) {
 		if ($data) {
 			extract($data);
 		}
 
 		$view_path  = "views/" . $page . ".view.php";
-		$model_path = "models/" . $page . ".model.php";
 
-		if (file_exists($view_path) && file_exists($model_path)) {
+		if (file_exists($view_path)) {
 			include "views/layout.php";
 		}
 		else {
+			echo "View file does not exist";
 			return false;
+		}
+	}
+
+	function model($models = []) {
+		if (count($models) > 0) {
+			foreach ($models as $model) {
+				if (file_exists("models/$model.model.php")) {
+					include "models/$model.model.php";
+				}
+				else {
+					"Model: $model does not exist";
+				}
+			}
+		}
+		else {
+			echo "No models";
 		}
 	}
 ?>

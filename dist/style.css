@@ -4,8 +4,13 @@
   box-sizing: border-box;
   font-family: "Arial"; }
 
+.blog__options:after {
+  content: '';
+  display: table;
+  clear: both; }
+
 .container {
-  width: 80%;
+  width: 70%;
   margin: 0 auto; }
 
 .form {
@@ -59,3 +64,19 @@ h1 {
     border-bottom: 1px solid #CCC;
     margin-bottom: 20px;
     padding-bottom: 20px; }
+
+.blog__options {
+  margin-top: 20px;
+  margin-bottom: 10px; }
+  .blog__options > li {
+    list-style: none;
+    display: block;
+    float: left;
+    margin-right: 10px; }
+  .blog__options a {
+    display: block;
+    font-size: 14px; }
+  .blog__options .delete {
+    color: red; }
+  .blog__options .edit {
+    color: blue; }

@@ -1,7 +1,15 @@
 @import "reset";
 
+%cf {
+	&:after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
+
 .container {
-	width: 80%;
+	width: 70%;
 	margin: 0 auto;
 }
 
@@ -68,5 +76,27 @@ h1 {
 		border-bottom: 1px solid #CCC;
 		margin-bottom: 20px;
 		padding-bottom: 20px;
+	}
+}
+
+.blog__options {
+	margin-top: 20px;
+	margin-bottom: 10px;
+	@extend %cf;
+	> li {
+		list-style: none;
+		display: block;
+		float: left;
+		margin-right: 10px;
+	}
+	a {
+		display: block;
+		font-size: 14px;
+	}
+	.delete {
+		color: red;
+	}
+	.edit {
+		color: blue;
 	}
 }
